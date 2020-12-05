@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import {   createSwitchNavigator, createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import WelcomeScreen from "../Containers/Welcome";
 import LoginScreen from '../Containers/Login.js';
@@ -31,12 +32,16 @@ const ProfileStack = createStackNavigator({
     Profile : ProfileScreen
 });
 
+const AppStack = createBottomTabNavigator({
+    Home : HomeStack,
+    Level : LevelStack,
+    Profile : ProfileStack
+})
+
 export default createAppContainer(createSwitchNavigator(
     {
         Sign : AuthStack,
-        HomeS : HomeStack,
-        Level : LevelStack,
-        Profile : ProfileStack
+        App : AppStack
     },
     {
         initialRouteName :'Sign'
