@@ -26,7 +26,7 @@ class  WelcomeScreen extends React.Component {
             </View>
             
 
-            <TouchableHighlight style={$.tryButton}>
+            <TouchableHighlight style={$.tryButton} onPress = {()=>this.props.navigation.navigate('Signup')}>
                 <Text style={$.tryButtonText} >Try Now</Text>
             </TouchableHighlight>
             
@@ -116,7 +116,7 @@ class  WelcomeScreen extends React.Component {
       justifyContent:'center'
 ,      alignContent:'center',
       width:'77%',
-      height:'55%',
+      height:'70%',
 
     },
     welcomeText1 :{
