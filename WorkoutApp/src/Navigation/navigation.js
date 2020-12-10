@@ -44,6 +44,8 @@ export default createAppContainer(createSwitchNavigator(
         App : AppStack
     },
     {
-        initialRouteName :'Sign'
+        initialRouteName :'Sign',
+        header:null,
+        headerMode: 'none'
     }
 ))
