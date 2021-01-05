@@ -26,7 +26,7 @@ class SignupScreen extends React.Component{
             </View>
 
 
-            <TouchableHighlight style={$.loginButton} >
+            <TouchableHighlight style={$.loginButton} onPress = {()=>this.props.navigation.navigate('Login')}>
               <Text style={$.buttonText} >Login</Text>
             </TouchableHighlight>
             <TouchableHighlight style={$.signupButton} >
